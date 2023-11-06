@@ -28,7 +28,7 @@ class SearchPokemonBridge(QObject):
             with open(filename, "wb") as file:
                 file.write(image_content)
 
-            image_path = pathlib.Path(".") / ".." / "temp" / response["name"]
+            image_path = pathlib.Path(".") / ".." / "temp" / f'{response["name"]}.png'
             return str(image_path), response["name"].capitalize()
         except Exception as e:
             print(e)

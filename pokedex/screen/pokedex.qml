@@ -52,7 +52,7 @@ ApplicationWindow  {
             }
 
             onClicked: {
-                pokemon_search.text = "Procurando pokemon..."
+                pokemon_label.text = "Procurando pokemon..."
                 image.source = "../assets/loading_without_bg.gif"
 
                 const pokemonResult = searchBridge.fetch_pokemon(pokemon_search.text);
